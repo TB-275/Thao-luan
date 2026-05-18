@@ -1,3 +1,0 @@
-[build]
-  publish = "THAO-LUAN"
-  functions = "netlify/functions"

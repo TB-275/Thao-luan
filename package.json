@@ -1,8 +1,0 @@
-{
-  "scripts": {
-    "check": "node --check THAO-LUAN/script.js && node --check netlify/functions/comments.js && node --check netlify/functions/_firebase-admin.js"
-  },
-  "dependencies": {
-    "firebase-admin": "^13.0.0"
-  }
-}

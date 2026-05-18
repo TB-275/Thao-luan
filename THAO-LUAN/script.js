@@ -1,4 +1,21 @@
-const COMMENTS_API = "/.netlify/functions/comments";
+// ==========================================
+// 1. CẤU HÌNH FIREBASE
+// ==========================================
+// Dán cấu hình bạn copy từ Firebase Console vào đây
+const firebaseConfig = {
+  apiKey: "AIzaSyDWPq92w48NfPzuec0TPFfni-ZVQMFJOLs",
+  authDomain: "thaoluandaihoi.firebaseapp.com",
+  databaseURL: "https://thaoluandaihoi-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "thaoluandaihoi",
+  storageBucket: "thaoluandaihoi.firebasestorage.app",
+  messagingSenderId: "843405316234",
+  appId: "1:843405316234:web:06d7cd6d1d9dbd49605d73",
+  measurementId: "G-HNGH4F39TG"
+};
+
+// Khởi tạo Firebase
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
 
 // ==========================================
 // 2. DỮ LIỆU ĐẠI BIỂU (Danh sách các Tổ)
@@ -98,27 +115,33 @@ window.addEventListener("load", () => {
     document.getElementById("loader").style.display = "none";
     document.getElementById("groupContainer").classList.remove("hidden");
     renderGroups();
-    refreshComments();
-    setInterval(refreshComments, 10000);
   }, 1000);
 });
 
-async function refreshComments(){
-  try {
-    const response = await fetch(COMMENTS_API);
-    if (!response.ok) throw new Error("Không lấy được dữ liệu góp ý");
+// Lắng nghe dữ liệu Real-time từ Firebase
+// LẮNG NGHE DỮ LIỆU REAL-TIME TỪ FIREBASE (Đã sửa lỗi đồng bộ)
+db.collection("Comments").onSnapshot((snapshot) => {
+  comments = [];
+  
+  snapshot.forEach((doc) => {
+    comments.push(doc.data());
+  });
 
-    const data = await response.json();
-    comments = Array.isArray(data.comments) ? data.comments : [];
-
-    if (currentGroup && !document.getElementById("discussion").classList.contains("hidden")) {
-      loadComments();
-      loadProgress();
-    }
-  } catch (error) {
-    console.error("Lỗi tải dữ liệu góp ý:", error);
+  // Tự động sắp xếp tin nhắn bằng Javascript thay vì nhờ Firebase (tránh lỗi thiếu Index)
+  comments.sort((a, b) => {
+    let timeA = a.timestamp ? a.timestamp.toMillis() : Date.now();
+    let timeB = b.timestamp ? b.timestamp.toMillis() : Date.now();
+    return timeA - timeB;
+  });
+  
+  // Tự động Cập nhật giao diện (Đổi màu tên, Thanh tiến độ, Danh sách ý kiến)
+  if (currentGroup && !document.getElementById("discussion").classList.contains("hidden")) {
+    loadComments();
+    loadProgress(); // Hàm này sẽ quét lại danh sách và đổi người đó sang màu Xanh
   }
-}
+}, (error) => {
+  console.log("Lỗi đồng bộ Real-time: ", error);
+});
 function showToast(message){
   const toast = document.getElementById("toast");
   toast.innerText = message;
@@ -190,8 +213,8 @@ function renderMembers(){
   });
 }
 
-// Gửi góp ý qua Netlify Function, không để cấu hình Firebase ở frontend.
-async function submitComment(){
+// Gửi góp ý lên Firebase
+function submitComment(){
   const selectedMember = document.getElementById("memberSelect").value;
   const guestName = document.getElementById("guestNameInput").value.trim();
   const member = guestName || selectedMember;
@@ -212,33 +235,23 @@ async function submitComment(){
   btn.disabled = true;
   btn.innerText = "ĐANG GỬI...";
 
-  try {
-    const response = await fetch(COMMENTS_API, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        groupId: currentGroup.id,
-        member: member,
-        comment: comment
-      })
-    });
-
-    if (!response.ok) {
-      const data = await response.json().catch(() => ({}));
-      throw new Error(data.error || "Không gửi được góp ý");
-    }
-
+  db.collection("Comments").add({
+    groupId: currentGroup.id,
+    member: member,
+    comment: comment,
+    time: new Date().toLocaleString('vi-VN'),
+    timestamp: firebase.firestore.FieldValue.serverTimestamp()
+  }).then(() => {
     document.getElementById("commentInput").value = "";
     document.getElementById("guestNameInput").value = "";
     showToast("Đã gửi góp ý thành công!");
-    await refreshComments();
-  } catch (error) {
+  }).catch((error) => {
     showToast("Lỗi kết nối! Vui lòng thử lại.");
     console.error(error);
-  } finally {
+  }).finally(() => {
     btn.disabled = false;
     btn.innerText = "GỬI Ý KIẾN";
-  }
+  });
 }
 
 function loadComments(){

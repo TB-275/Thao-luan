@@ -24,7 +24,7 @@ const groups = [
   { 
     id: 1, 
     title: "Tổ 1: Giáo dục lý tưởng cách mạng, đạo đức, lối sống cho thanh niên", 
-    topic: "Tập trung trao đổi về: Thực trạng nhận thức chính trị, lý tưởng sống của thanh niên hiện nay. Những tác động của mạng xã hội, không gian mạng đến lối sống, giá trị của giới trẻ. Giải pháp nâng cao “sức đề kháng” trước thông tin xấu độc. Mô hình, cách làm hiệu quả trong giáo dục lý tưởng, truyền thống cho thanh niên. Gợi ý trọng tâm: Làm thế nào để xây dựng hình mẫu thanh niên Đà Nẵng “khát vọng - trách nhiệm - văn minh - sáng tạo”.", 
+    topic: "Tập trung trao đổi về: Thực trạng nhận thức chính trị, lý tưởng sống của thanh niên hiện nay. Những tác động của mạng xã hội, không gian mạng đến đời sống của giới trẻ. Giải pháp nâng cao “sức đề kháng” trước thông tin xấu độc trên không gian mạng. Mô hình, cách làm hiệu quả trong giáo dục lý tưởng cách mạng, đạo đức, lối sống cho thanh niên. Gợi ý trọng tâm: Tổ chức Hội các cấp cần làm thế nào để xây dựng hình mẫu thanh niên Đà Nẵng “khát vọng - trách nhiệm - văn minh - sáng tạo”.", 
     members: [ 
       "Nguyễn Bá Duân", "Trương Thị Ngọc Phương", "Nguyễn Thanh Phong", "Nguyễn Thanh Hiền", "Vũ Thanh Nguyên", 
       "Trà Hoàng Sơn", "Nguyễn Đăng Hòa", "Ating Toàn", "Bùi Anh Đức", "Châu Ngọc Cường", 
@@ -44,7 +44,7 @@ const groups = [
   { 
     id: 2, 
     title: "Tổ 2: Phát huy vai trò thanh niên trong chuyển đổi số", 
-    topic: "Tập trung trao đổi về: Vai trò của thanh niên trong thực hiện chuyển đổi số thành phố; thực trạng kỹ năng số, năng lực số của thanh niên hiện nay; những thuận lợi, khó khăn trong việc ứng dụng công nghệ số vào học tập, lao động và đời sống. Các mô hình, sáng kiến hiệu quả của thanh niên trong chuyển đổi số cộng đồng, thương mại điện tử, kinh tế số và đổi mới sáng tạo. Đề xuất giải pháp nâng cao năng lực số, phát huy vai trò xung kích của thanh niên trong xây dựng công dân số, xã hội số và thành phố thông minh. Gợi ý trọng tâm: Thanh niên cần chuẩn bị những gì để trở thành lực lượng tiên phong, nòng cốt trong tiến trình chuyển đổi số và phát triển nền kinh tế số của thành phố.", 
+    topic: "Tập trung trao đổi về: Vai trò của thanh niên trong thực hiện chuyển đổi số thành phố; thực trạng kỹ năng số, năng lực số của thanh niên hiện nay; những thuận lợi, khó khăn trong việc ứng dụng công nghệ số vào học tập, lao động và đời sống. Các mô hình, sáng kiến hiệu quả của thanh niên trong chuyển đổi số cộng đồng, thương mại điện tử, kinh tế số và đổi mới sáng tạo. Đề xuất giải pháp nâng cao năng lực số, phát huy vai trò xung kích của thanh niên trong xây dựng công dân số, xã hội số và thành phố thông minh. Gợi ý trọng tâm: Tổ chức Hội các cấp cần làm gì để thanh niên trở thành lực lượng tiên phong, nòng cốt trong tiến trình chuyển đổi số và phát triển nền kinh tế số của thành phố.", 
     members: [ "Nguyễn Duy Thành", "Phan Ngọc Minh", "Nguyễn Lương Thành Đạt", "Lê Duy ", "Lê Ngọc Nhiên Hà",
                "Nguyễn Trọng Huy", "Phạm Tiến", "Ông Văn Tùng", "Nguyễn Văn Quy", "Hoàng Văn Hiệp", "Trương Đức Long", "Huỳnh Thanh Đông",
                "Phạm Thị Hiếu Ngân", "Phan Thành Lưu", "Huỳnh Ngọc Đông", "Võ Như Minh", "Hà Thị Nga", "Nguyễn Ngà ", "Ngô Thị Tú Trinh",
@@ -59,7 +59,7 @@ const groups = [
   { 
     id: 3, 
     title: "Tổ 3: Thanh niên chung tay xây dựng nông thôn mới, đô thị văn minh, thành phố đáng sống", 
-    topic: "Tập trung trao đổi về: Vai trò của thanh niên trong bảo vệ môi trường, xây dựng nếp sống văn minh đô thị. Các phong trào, mô hình thanh niên tham gia xây dựng thành phố xanh - sạch - đẹp. Giải pháp nâng cao ý thức cộng đồng, văn hóa ứng xử của thanh niên. Gắn hoạt động Hội với các nhiệm vụ phát triển kinh tế - xã hội của thành phố. Gợi ý trọng tâm: Định vị vai trò thanh niên trong việc xây dựng Đà Nẵng trở thành đô thị sinh thái, thông minh, đáng sống.", 
+    topic: "Tập trung trao đổi về: Vai trò của thanh niên trong bảo vệ môi trường, xây dựng nếp sống văn minh đô thị. Các phong trào, mô hình thanh niên tham gia xây dựng thành phố xanh - sạch - đẹp. Giải pháp nâng cao ý thức cộng đồng, văn hóa ứng xử của thanh niên. Gắn hoạt động Hội với các nhiệm vụ phát triển kinh tế - xã hội của thành phố. Gợi ý trọng tâm: Tổ chức Hội các cấp cần làm gì để phát huy  vai trò thanh niên trong việc xây dựng Đà Nẵng trở thành đô thị sinh thái, thông minh, đáng sống.", 
     members: [ "Nguyễn Thị Nhung","Bùi Thiên Vỹ", "Đào Kim Long","Lê Xuân Thành ","Phan Hoàng Huy","Nguyễn Lê Hưng","Lê Thị Kim Linh","Đặng Ngọc Châu",
                 "Lê Thị Bích Luyện","Hồ Văn Hiếu","Nguyễn Thị Hoàng My","Bùi Văn Liu","Hồ Tư Huỳnh","Huỳnh Văn Hoàng","Nguyễn Văn Thanh","Hồ Văn Dũng",
                 "Hồ Văn Gương","Nguyễn Hồng Xuyến","Hồ Văn Dấu","Nguyễn Thành Long","Nguyễn Thị Bích Thùy","Hồ Văn Trí","Võ Thị Lệ Thu","Nguyễn Nhật Tuân ",
@@ -73,7 +73,7 @@ const groups = [
   { 
     id: 4, 
     title: "Tổ 4: Đổi mới công tác Hội, tăng cường mở rộng đoàn kết tập hợp thanh niên", 
-    topic: "Tập trung trao đổi về: Thực trạng hoạt động của tổ chức Hội hiện nay. Những khó khăn trong việc tập hợp thanh niên đặc thù (lao động tự do, thanh niên tôn giáo, thanh niên trên không gian mạng…). Đổi mới nội dung, phương thức hoạt động Hội. Ứng dụng công nghệ trong quản lý, kết nối hội viên. Gợi ý trọng tâm: Làm thế nào để tổ chức Hội thực sự là “người bạn đồng hành” của thanh niên.", 
+    topic: "Tập trung trao đổi về: Thực trạng hoạt động của tổ chức Hội hiện nay. Những khó khăn trong việc tập hợp thanh niên đặc thù (lao động tự do, thanh niên tôn giáo, thanh niên trên không gian mạng…). Đổi mới nội dung, phương thức hoạt động Hội. Ứng dụng công nghệ trong quản lý, kết nối hội viên. Gợi ý trọng tâm: Tổ chức Hội các cấp cần làm thế nào để tổ chức Hội thực sự là “người bạn đồng hành” của thanh niên.", 
     members: [ "Nguyễn Thành Trung","Hoàng Thị Ý Nhi","Lương Thị Nhẫn","Mai Hồng Anh","Nguyễn Đỗ Bảo Trâm",
                 "Lê Lãnh","Lê Thị Hồng Tuyết","Đoàn Thị Thu Ba","Pơ Loong Pao ","Coor Nhung","Un Thị Kim","Plong Thị Phát","Zơ Râm Hải","A Lăng Thế",
                 "Coor Thanh Sơn","A Lăng Thị Hằng","Alăng Ứi","A Lăng Thị Bích","Bríu Công","Ating Bi","Ploong Thị Hoài","Hồ Thị Lê","Riah Rục",
@@ -88,7 +88,7 @@ const groups = [
   { 
     id: 5, 
     title: "Tổ 5: Khơi dậy khát vọng khởi nghiệp, lập nghiệp trong thanh niên", 
-    topic: "Tập trung trao đổi về: Nhu cầu, xu hướng khởi nghiệp, lập nghiệp của thanh niên trong giai đoạn hiện nay; những thuận lợi, khó khăn trong quá trình khởi nghiệp của thanh niên. Vai trò của tổ chức Hội trong đồng hành, hỗ trợ thanh niên về kiến thức, kỹ năng, vốn, kết nối nguồn lực và môi trường khởi nghiệp. Chia sẻ các mô hình kinh tế hiệu quả, dự án khởi nghiệp tiêu biểu của thanh niên trên các lĩnh vực; giải pháp thúc đẩy tinh thần đổi mới sáng tạo, phát triển kinh tế số, kinh tế xanh trong thanh niên. Gợi ý trọng tâm: Làm thế nào để khơi dậy mạnh mẽ tinh thần dám nghĩ, dám làm, khát vọng lập thân, lập nghiệp và phát triển kinh tế trong thanh niên Đà Nẵng.", 
+    topic: "Tập trung trao đổi về: Nhu cầu, xu hướng khởi nghiệp, lập nghiệp của thanh niên trong giai đoạn hiện nay; những thuận lợi, khó khăn trong quá trình khởi nghiệp của thanh niên. Vai trò của tổ chức Hội trong đồng hành, hỗ trợ thanh niên về kiến thức, kỹ năng, vốn, kết nối nguồn lực và môi trường khởi nghiệp. Chia sẻ các mô hình kinh tế hiệu quả, dự án khởi nghiệp tiêu biểu của thanh niên trên các lĩnh vực; giải pháp thúc đẩy tinh thần đổi mới sáng tạo, phát triển kinh tế số, kinh tế xanh trong thanh niên. Gợi ý trọng tâm: Tổ chức Hội các cấp cần làm thế nào để khơi dậy mạnh mẽ tinh thần dám nghĩ, dám làm, khát vọng lập thân, lập nghiệp và phát triển kinh tế trong thanh niên Đà Nẵng.", 
     members: [ "Trần Xuân Vĩ","Đỗ Lê Hưng Toàn","Nguyễn Khoa Vỹ","Nguyễn Trọng Nghĩa","Nguyễn Thị Kim Trinh","Nguyễn Thị Hạnh Nguyên","Nguyễn Quốc Khánh","Đinh Quang Lĩnh",
               "Võ Thị Như Ngọc", "Trần Vĩnh Tiến","Trịnh Ngọc Tấn","Nguyễn Viết Hùng","Lê Thị Kim Dung","Nguyễn Thị Yến Nhi",
               "Nguyễn Khoa Điềm","Lê Đình Lượng","Phan Tú Anh","Phan Thị Hoàng Lê","Nguyễn Đức Tài","Cao Anh Tuấn","Đặng Minh Vương","Nguyễn Vinh Huy",

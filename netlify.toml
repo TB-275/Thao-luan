@@ -1,0 +1,12 @@
+[build]
+  publish = "THAO-LUAN"
+  functions = "netlify/functions"
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /Comments/{docId} {
+      allow read, write: if false;
+    }
+  }
+}

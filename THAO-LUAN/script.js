@@ -65,7 +65,7 @@ const groups = [
                 "Lê Thị Bích Luyện","Hồ Văn Hiếu","Nguyễn Thị Hoàng My","Bùi Văn Liu","Hồ Tư Huỳnh","Huỳnh Văn Hoàng","Nguyễn Văn Thanh","Hồ Văn Dũng",
                 "Hồ Văn Gương","Nguyễn Hồng Xuyến","Hồ Văn Dấu","Nguyễn Thành Long","Nguyễn Thị Bích Thùy","Hồ Văn Trí","Võ Thị Lệ Thu","Nguyễn Nhật Tuân ",
                 "Phạm Thị Diệu","Nguyễn Thị Lin","Võ Ngọc Anh","Ngô Văn Tư","Bùi Văn Khánh","Nguyễn Vũ Việt","Nguyễn Thị Thùy Ngân","Đặng Thành Công",
-                "Nguyễn Thị Mỹ Linh","Trần Lê Thị Kim Oanh","Bùi Nguyễn Hiền Vi","Lê Thị Hoày Thương","Nguyễn Thị Ánh Quyên",
+                "Nguyễn Thị Mỹ Linh","Trần Lê Thị Kim Oanh","Bùi Nguyễn Hiền Vi","Lê Thị Hoài Thương","Nguyễn Thị Ánh Quyên",
                 "Nguyễn Thị Thúy Hằng","Trần Văn Thắng","Trần Đại Việt","Đoàn Xuân Lộc","Trần Vũ Ngọc","Hà Tấn anh","Nguyễn Đình An ","Lương Văn Vinh ","Nguyễn Linh","Trương Thị Thu Viên","Phan Văn Pháp",
                 "Nguyễn Văn Thuận","Ngô Thị Thảo Nguyên","Nguyễn Thị Mỵ Châu","Nguyễn Phước Tiến Huy","Trần Văn Trọng","Trần Quốc Công",
                 "Huỳnh Thị Thùy Trâm","Huỳnh Thị Ngọc Thúy","Nguyễn Dương Hậu ","Trương Minh Quốc","Huỳnh Thị Hoa","Lê Thị Long Viên ",
@@ -83,7 +83,7 @@ const groups = [
                 "Phạm Văn Hữu","Hồ Văn Tranh","A Mực","Hồ Văn Dũng","Nguyễn Thị Thế","Võ Thị Minh Lý","Lê Thị Xuân","Trần Thị Kim Yến",
                 "Bùi Thị Thùy Dương","Nguyễn Hoàng Đạt","Trần Thị Lệ Chi","Ngô Văn Thảo Nguyên","Đặng Anh Đào","Lê Minh Dũng","Cao Nam Hải","Đào Hồng Phú Mỹ",
                 "Tống Duy Quốc","Ngô Thị Hoàng Vân","Trần Như Quỳnh","Nguyễn Hoàng Khánh Đoan","Hồ Thị Mỹ Hà","Phạm Văn Mãi","Đặng Ngọc Nhung",
-                "Lương Lê Ngọc Sương","Lê Thế Vĩnh","Trương Anh Tài","Hồ Hồng Quang Hào","A Râl Vượng","Trần Thị Hoài Linh",
+                "Lương Lê Ngọc Sương","Lê Thế Vĩnh","Trương Anh Tài","Hồ Hồng Quang Hào","A Râl Vượng","Trần Thị Hoài Linh"
  ] 
   }, 
   { 

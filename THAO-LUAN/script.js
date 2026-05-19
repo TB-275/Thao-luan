@@ -121,7 +121,7 @@ window.addEventListener("load", () => {
 
 // Lắng nghe dữ liệu Real-time từ Firebase
 // LẮNG NGHE DỮ LIỆU REAL-TIME TỪ FIREBASE (Đã sửa lỗi đồng bộ)
-db.collection("Comments").onSnapshot((snapshot) => {
+db.collection("thaoluan").onSnapshot((snapshot) => {
   comments = [];
   
   snapshot.forEach((doc) => {
@@ -236,7 +236,7 @@ function submitComment(){
   btn.disabled = true;
   btn.innerText = "ĐANG GỬI...";
 
-  db.collection("Comments").add({
+  db.collection("thaoluan").add({
     groupId: currentGroup.id,
     member: member,
     comment: comment,

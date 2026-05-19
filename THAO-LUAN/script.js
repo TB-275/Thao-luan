@@ -53,7 +53,7 @@ const groups = [
                "Nguyễn Quốc Công", "Nguyễn Văn Tân", "Lê Thị Ngọc Ly", "Hồ Thị Hoàng Tú", "Võ Thị Thu Hòa", "Trương Văn Hòa", "Phạm Thị Huyền Trang", "Trần Phước Vinh", "Nguyễn Hà Vi", "Phạm Hoàng Tuấn", "Nguyễn Thị Mỹ Ngọc ", "Phạm Thị Yến Chi", "Trần Văn Linh", "Trần Thị Nhơn",
                "Châu Ngọc Huy", "Đoàn Xuân Nương", "Huỳnh Minh Phát", "Hoàng Kim Anh", "Nguyễn Văn Hậu ", "Nguyễn Đức Hưng", "Nguyễn Thị Thu Huyền", "Huỳnh Đức Trí", "Đoàn Thanh Lâm",
                "Nguyễn Vũ Như Hoàng", "Cao Văn Nam", "Phạm Thị Trung", "Trần Hồ Thu", "Trương Thị Thanh Tâm", "Lê Thị Ảnh", "Nguyễn Văn Hảo", "Mai Văn Dân", "Vũ Thành Đạt",
-               "Trương Thị Tường Vi", "Trần Quốc Vũ", "Phạm Thành An", "Lê Thị Bảo Trâm", "Huỳnh Thị Hoa", "Nguyễn Hoài Nhơn",
+               "Trương Thị Tường Vi", "Trần Quốc Vũ", "Phạm Thành An", "Lê Thị Bảo Trâm", "Huỳnh Thị Hoa (Xã Trà Liên)", "Nguyễn Hoài Nhơn",
                "Nguyễn Văn Thạch", "Đinh Văn Mực", "Trần Quang Định", "Hồ Văn Tâm", "Trần Hồng Sơn", "Hồ Văn Dương"
  ] 
   }, 
@@ -62,13 +62,13 @@ const groups = [
     title: "Tổ 3: Thanh niên chung tay xây dựng nông thôn mới, đô thị văn minh, thành phố đáng sống", 
     topic: "Tập trung trao đổi về: Vai trò của thanh niên trong bảo vệ môi trường, xây dựng nếp sống văn minh đô thị. Các phong trào, mô hình thanh niên tham gia xây dựng thành phố xanh - sạch - đẹp. Giải pháp nâng cao ý thức cộng đồng, văn hóa ứng xử của thanh niên. Gắn hoạt động Hội với các nhiệm vụ phát triển kinh tế - xã hội của thành phố. Gợi ý trọng tâm: Tổ chức Hội các cấp cần làm gì để phát huy  vai trò thanh niên trong việc xây dựng Đà Nẵng trở thành đô thị sinh thái, thông minh, đáng sống.", 
     members: [ "Nguyễn Thị Nhung","Bùi Thiên Vỹ", "Đào Kim Long","Lê Xuân Thành ","Phan Hoàng Huy","Nguyễn Lê Hưng","Lê Thị Kim Linh","Đặng Ngọc Châu",
-                "Lê Thị Bích Luyện","Hồ Văn Hiếu","Nguyễn Thị Hoàng My","Bùi Văn Liu","Hồ Tư Huỳnh","Huỳnh Văn Hoàng","Nguyễn Văn Thanh","Hồ Văn Dũng",
+                "Lê Thị Bích Luyện","Hồ Văn Hiếu","Nguyễn Thị Hoàng My","Bùi Văn Liu","Hồ Tư Huỳnh","Huỳnh Văn Hoàng","Nguyễn Văn Thanh","Hồ Văn Dũng (Xã Trà Tập)",
                 "Hồ Văn Gương","Nguyễn Hồng Xuyến","Hồ Văn Dấu","Nguyễn Thành Long","Nguyễn Thị Bích Thùy","Hồ Văn Trí","Võ Thị Lệ Thu","Nguyễn Nhật Tuân ",
                 "Phạm Thị Diệu","Nguyễn Thị Lin","Võ Ngọc Anh","Ngô Văn Tư","Bùi Văn Khánh","Nguyễn Vũ Việt","Nguyễn Thị Thùy Ngân","Đặng Thành Công",
-                "Nguyễn Thị Mỹ Linh","Trần Lê Thị Kim Oanh","Bùi Nguyễn Hiền Vi","Lê Thị Hoài Thương","Nguyễn Thị Ánh Quyên",
+                "Nguyễn Thị Mỹ Linh (Xã Thăng Phú)","Trần Lê Thị Kim Oanh","Bùi Nguyễn Hiền Vi","Lê Thị Hoài Thương","Nguyễn Thị Ánh Quyên",
                 "Nguyễn Thị Thúy Hằng","Trần Văn Thắng","Trần Đại Việt","Đoàn Xuân Lộc","Trần Vũ Ngọc","Hà Tấn anh","Nguyễn Đình An ","Lương Văn Vinh ","Nguyễn Linh","Trương Thị Thu Viên","Phan Văn Pháp",
                 "Nguyễn Văn Thuận","Ngô Thị Thảo Nguyên","Nguyễn Thị Mỵ Châu","Nguyễn Phước Tiến Huy","Trần Văn Trọng","Trần Quốc Công",
-                "Huỳnh Thị Thùy Trâm","Huỳnh Thị Ngọc Thúy","Nguyễn Dương Hậu ","Trương Minh Quốc","Huỳnh Thị Hoa","Lê Thị Long Viên ",
+                "Huỳnh Thị Thùy Trâm","Huỳnh Thị Ngọc Thúy","Nguyễn Dương Hậu ","Trương Minh Quốc","Huỳnh Thị Hoa (Xã Hà Nha)","Lê Thị Long Viên ",
                 "Huỳnh Thanh Thiên ","Đỗ Minh Vương","Nguyễn Thị Hương","Nguyễn Thị Yến Vy","Nguyễn Hồng Tươi","Nguyễn Văn Hường","Võ Thanh Luân","A Rất Dương","Bhling Ưi","A Rất Chung" ]
   }, 
   { 
@@ -79,8 +79,8 @@ const groups = [
                 "Lê Lãnh","Lê Thị Hồng Tuyết","Đoàn Thị Thu Ba","Pơ Loong Pao ","Coor Nhung","Un Thị Kim","Plong Thị Phát","Zơ Râm Hải","A Lăng Thế",
                 "Coor Thanh Sơn","A Lăng Thị Hằng","Alăng Ứi","A Lăng Thị Bích","Bríu Công","Ating Bi","Ploong Thị Hoài","Hồ Thị Lê","Riah Rục",
                 "Bnướch Hút","Bling Vơn","Phạm Trần Lương Tri","Alăng Crom","Alăng Bơm","Ríah Dung","Hốih Anh","Huỳnh Đức Tú","Trần Phục Triều",
-                "Nguyễn Thị Kim Thoa","Mai Thị Vân","Hồ Thị Danh","Tạ Thành Công","A Yá","Nguyễn Hoàng Huy","Hồ Thị Ngân","Nguyễn Thị Mỹ Linh","Nguyễn Thị Trâm",
-                "Phạm Văn Hữu","Hồ Văn Tranh","A Mực","Hồ Văn Dũng","Nguyễn Thị Thế","Võ Thị Minh Lý","Lê Thị Xuân","Trần Thị Kim Yến",
+                "Nguyễn Thị Kim Thoa","Mai Thị Vân","Hồ Thị Danh","Tạ Thành Công","A Yá","Nguyễn Hoàng Huy","Hồ Thị Ngân","Nguyễn Thị Mỹ Linh (Xã Phước Năng)","Nguyễn Thị Trâm",
+                "Phạm Văn Hữu","Hồ Văn Tranh","A Mực","Hồ Văn Dũng (Xã Phước Hiệp)","Nguyễn Thị Thế","Võ Thị Minh Lý","Lê Thị Xuân","Trần Thị Kim Yến",
                 "Bùi Thị Thùy Dương","Nguyễn Hoàng Đạt","Trần Thị Lệ Chi","Ngô Văn Thảo Nguyên","Đặng Anh Đào","Lê Minh Dũng","Cao Nam Hải","Đào Hồng Phú Mỹ",
                 "Tống Duy Quốc","Ngô Thị Hoàng Vân","Trần Như Quỳnh","Nguyễn Hoàng Khánh Đoan","Hồ Thị Mỹ Hà","Phạm Văn Mãi","Đặng Ngọc Nhung",
                 "Lương Lê Ngọc Sương","Lê Thế Vĩnh","Trương Anh Tài","Hồ Hồng Quang Hào","A Râl Vượng","Trần Thị Hoài Linh"

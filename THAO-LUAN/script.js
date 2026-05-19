@@ -16,6 +16,7 @@ const firebaseConfig = {
 // Khởi tạo Firebase
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
+const COLLECTION_NAME = "thaoluan";
 
 // ==========================================
 // 2. DỮ LIỆU ĐẠI BIỂU (Danh sách các Tổ)

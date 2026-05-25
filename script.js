@@ -12,12 +12,10 @@ const firebaseConfig = {
   appId: "1:843405316234:web:06d7cd6d1d9dbd49605d73",
   measurementId: "G-HNGH4F39TG"
 };
-
 // Khởi tạo Firebase
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 const COLLECTION_NAME = "thaoluan";
-
 // ==========================================
 // 2. DỮ LIỆU ĐẠI BIỂU (Danh sách các Tổ)
 // ==========================================
@@ -105,7 +103,6 @@ const groups = [
 
 let currentGroup = null;
 let comments = [];
-
 // ==========================================
 // 3. LOGIC XỬ LÝ GIAO DIỆN & FIREBASE
 // ==========================================

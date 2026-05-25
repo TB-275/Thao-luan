@@ -88,15 +88,14 @@ const groups = [
     id: 5, 
     title: "Tổ 5: Khơi dậy khát vọng khởi nghiệp, lập nghiệp trong thanh niên", 
     topic: "Tập trung trao đổi về: Nhu cầu, xu hướng khởi nghiệp, lập nghiệp của thanh niên trong giai đoạn hiện nay; những thuận lợi, khó khăn trong quá trình khởi nghiệp của thanh niên. Vai trò của tổ chức Hội trong đồng hành, hỗ trợ thanh niên về kiến thức, kỹ năng, vốn, kết nối nguồn lực và môi trường khởi nghiệp. Chia sẻ các mô hình kinh tế hiệu quả, dự án khởi nghiệp tiêu biểu của thanh niên trên các lĩnh vực; giải pháp thúc đẩy tinh thần đổi mới sáng tạo, phát triển kinh tế số, kinh tế xanh trong thanh niên. Gợi ý trọng tâm: Tổ chức Hội các cấp cần làm thế nào để khơi dậy mạnh mẽ tinh thần dám nghĩ, dám làm, khát vọng lập thân, lập nghiệp và phát triển kinh tế trong thanh niên Đà Nẵng.", 
-    members: [ "Trần Xuân Vĩ","Đỗ Lê Hưng Toàn","Nguyễn Khoa Vỹ","Nguyễn Trọng Nghĩa","Bùi Thị Triều","Nguyễn Thị Hạnh Nguyên","Nguyễn Quốc Khánh","Đinh Quang Lĩnh",
-              "Võ Thị Như Ngọc", "Trần Vĩnh Tiến","Trịnh Ngọc Tấn","Nguyễn Viết Hùng","Lê Thị Kim Dung","Nguyễn Thị Yến Nhi",
-              "Nguyễn Khoa Điềm","Lê Đình Lượng","Phan Tú Anh","Phan Thị Hoàng Lê","Nguyễn Đức Tài","Cao Anh Tuấn","Đặng Minh Vương","Nguyễn Vinh Huy",
-              "Nguyễn Đăng Khoa","Nguyễn Hữu Anh Dũng","Hồng Thị Kim Uyên","Nguyễn Thị Hoàng Vy","Trần Thị Xuân Hương","Trần Thị Thanh Hằng","Nguyễn Hoàng Việt Danh","Huỳnh Lê Triều Vỹ",
-              "Võ Văn Nhi","Hoàng Anh Cảm","Nguyễn Hoàng Nam","Đoàn Thị Anh Thư ","Nguyễn Thị Mơ","Nguyễn Thanh Hiếu","Nguyễn Trí Thành","Đỗ Lê Văn Thuấn","Huỳnh Đức",
-              "Lê Văn Hiệp","Đỗ Hồng Quang","Nguyễn Văn Điệp","Trần Văn Thơ","Nguyễn Khắc Tuấn ","Nguyễn Anh Tuấn","Hà Phước Thái",
-              "Hồ Đình Trí","Phạm Quang Mẫn ","Võ Văn Thành","Phạm Phú Dũng","Nguyễn Văn Hoàng","Đinh Hữu Công","Nguyễn Văn Sơn",
-              "Phùng Nhật Tuyên","Nguyễn Ngọc Tâm","Lê Thị Lành","Dương Đình Cường","Trương Thanh Tịnh","Nguyễn Đức Hải","Nguyễn Thi Mây","Hồ Thanh Tâm",
-              "Lê Long Khánh","Võ Thị Thanh Minh","Đặng Thị Vân","Trịnh Hồng Minh", "Gia Hân", "Bùi Thị Triều","Trương Công Nhàn","Đặng Tuấn Việt","Hồ Thị Hoàng Châu"         
+    members: [ "Trần Xuân Vĩ","Đỗ Lê Hưng Toàn ","Nguyễn Khoa Vỹ","Nguyễn Trọng Nghĩa","Bùi Thị Triều","Nguyễn Thị Hạnh Nguyên","Nguyễn Quốc Khánh","Đinh Quang Lĩnh",
+"Võ Thị Như Ngọc","Trần Vĩnh Tiến","Trịnh Ngọc Tấn","Nguyễn Viết Hùng","Lê Thị Kim Dung","Nguyễn Thị Yến Nhi","Nguyễn Khoa Điềm","Lê Đình Lượng",
+"Phan Tú Anh","Phan Thị Hoàng Lê","Nguyễn Đức Tài","Cao Anh Tuấn","Đặng Minh Vương","Nguyễn Vinh Huy","Nguyễn Đăng Khoa","Nguyễn Hữu Anh Dũng","Hồng Thị Kim Uyên","Nguyễn Thị Hoàng Vy",
+"Trần Thị Xuân Hương","Trần Thị Thanh Hằng","Nguyễn Hoàng Việt Danh","Huỳnh Lê Triều Vỹ","Võ Văn Nhi","Hoàng Anh Cảm","Nguyễn Hoàng Nam","Đoàn Thị Anh Thư ","Nguyễn Thị Mơ",
+"Nguyễn Thanh Hiếu","Nguyễn Trí Thành","Đỗ Lê Văn Thuấn","Huỳnh Đức","Lê Văn Hiệp","Đỗ Hồng Quang","Nguyễn Văn Điệp","Trần Văn Thơ","Nguyễn Khắc Tuấn ","Nguyễn Anh Tuấn","Hà Phước Thái",
+"Hồ Đình Trí","Phạm Quang Mẫn ","Võ Văn Thành","Phạm Phú Dũng","Nguyễn Văn Hoàng","Đinh Hữu Công","Nguyễn Văn Sơn","Phùng Nhật Tuyên","Nguyễn Ngọc Tâm","Lê Thị Lành","Dương Đình Cường ","Trương Thanh Tịnh ",
+"Nguyễn Đức Hải","Nguyễn Thi Mây","Hồ Thanh Tâm","Lê Long Khánh","Võ Thị Thanh Minh","Đặng Thị Vân","Trịnh Hồng Minh ","Phạm Thị Kim Thoa ","Nguyễn Đình Khâm Thuận","Trương Công Nhàn ","Nguyễn Thị Thanh Phúc","Hồ Thị Hoàng Châu "
+
  ] 
   } 
 ];

@@ -115,9 +115,7 @@ window.addEventListener("load", () => {
     renderGroups();
   }, 1000);
 });
-
 // Lắng nghe dữ liệu Real-time từ Firebase
-// LẮNG NGHE DỮ LIỆU REAL-TIME TỪ FIREBASE (Đã sửa lỗi đồng bộ)
 db.collection("thaoluan").onSnapshot((snapshot) => {
   comments = [];
   

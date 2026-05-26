@@ -50,7 +50,7 @@ const groups = [
                "Trịnh Võ Anh Khoa", "Lê Anh Tuấn", "Lê Viết Hoàng", "Lê Tự Hoài Ân", "Nguyễn Quang Vinh", "Từ Nguyễn Tương Lai", "Lê Đăng Quốc Hải",
                "Nguyễn Quốc Công", "Nguyễn Văn Tân", "Lê Thị Ngọc Ly", "Hồ Thị Hoàng Tú", "Võ Thị Thu Hòa", "Trương Văn Hòa", "Phạm Thị Huyền Trang", "Trần Phước Vinh", "Nguyễn Hà Vi", "Phạm Hoàng Tuấn", "Nguyễn Thị Mỹ Ngọc ", "Phạm Thị Yến Chi", "Trần Văn Linh", "Trần Thị Nhơn",
                "Châu Ngọc Huy", "Đoàn Xuân Nương", "Huỳnh Minh Phát", "Hoàng Kim Anh", "Nguyễn Văn Hậu ", "Nguyễn Đức Hưng", "Nguyễn Thị Thu Huyền", "Huỳnh Đức Trí", "Đoàn Thanh Lâm",
-               "Nguyễn Vũ Như Hoàng", "Cao Văn Nam", "Phạm Thị Trung", "Trần Hồ Thu", "Trương Thị Thanh Tâm", "Lê Thị Ảnh", "Nguyễn Văn Hảo", "Mai Văn Dân", "Vũ Thành Đạt",
+               "Nguyễn Vũ Như Hoàng", "Cao Văn Nam", "Lê Đức Trung", "Trần Hồ Thu", "Trương Thị Thanh Tâm", "Lê Thị Ảnh", "Nguyễn Văn Hảo", "Mai Văn Dân", "Vũ Thành Đạt",
                "Trương Thị Tường Vi", "Trần Quốc Vũ", "Phạm Thành An", "Lê Thị Bảo Trâm", "Huỳnh Thị Hoa (Xã Trà Liên)", "Nguyễn Hoài Nhơn",
                "Nguyễn Văn Thạch", "Đinh Văn Mực", "Trần Quang Định", "Hồ Văn Tâm", "Trần Hồng Sơn", "Hồ Văn Dương"
  ] 
@@ -74,7 +74,7 @@ const groups = [
     title: "Tổ 4: Đổi mới công tác Hội, tăng cường mở rộng đoàn kết tập hợp thanh niên", 
     topic: "Tập trung trao đổi về: Thực trạng hoạt động của tổ chức Hội hiện nay. Những khó khăn trong việc tập hợp thanh niên đặc thù (lao động tự do, thanh niên tôn giáo, thanh niên trên không gian mạng…). Đổi mới nội dung, phương thức hoạt động Hội. Ứng dụng công nghệ trong quản lý, kết nối hội viên. Gợi ý trọng tâm: Tổ chức Hội các cấp cần làm thế nào để tổ chức Hội thực sự là “người bạn đồng hành” của thanh niên.", 
     members: [ "Nguyễn Thành Trung","Hoàng Thị Ý Nhi","Lương Thị Nhẫn","Mai Hồng Anh","Nguyễn Đỗ Bảo Trâm",
-                "Lê Lãnh","Lê Thị Hồng Tuyết","Đoàn Thị Thu Ba","Pơ Loong Pao ","Coor Nhung","Un Thị Kim","Plong Thị Phát","Zơ Râm Hải","A Lăng Thế",
+                "Lê Lãnh","Lê Thị Hồng Tuyết","Đoàn Thị Thu Ba","Pơ Loong Pao ","Coor Nhung","Un Thị Kim","Hiên Thị Tịnh","Zơ Râm Hải","A Lăng Thế",
                 "Coor Thanh Sơn","A Lăng Thị Hằng","Alăng Ứi","A Lăng Thị Bích","Bríu Công","Ating Bi","Ploong Thị Hoài","Hồ Thị Lê","Riah Rục",
                 "Bnướch Hút","Bling Vơn","Phạm Trần Lương Tri","Alăng Crom","Alăng Bơm","Ríah Dung","Hốih Anh","Huỳnh Đức Tú","Trần Phục Triều",
                 "Nguyễn Thị Kim Thoa","Mai Thị Vân","Hồ Thị Danh","Tạ Thành Công","A Yá","Nguyễn Hoàng Huy","Hồ Thị Ngân","Nguyễn Thị Mỹ Linh (Xã Phước Năng)","Nguyễn Thị Trâm",

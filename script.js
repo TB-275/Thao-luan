@@ -94,7 +94,7 @@ const groups = [
 "Trần Thị Xuân Hương","Trần Thị Thanh Hằng","Nguyễn Hoàng Việt Danh","Huỳnh Lê Triều Vỹ","Võ Văn Nhi","Hoàng Anh Cảm","Nguyễn Hoàng Nam","Đoàn Thị Anh Thư ","Nguyễn Thị Mơ",
 "Nguyễn Thanh Hiếu","Nguyễn Trí Thành","Đỗ Lê Văn Thuấn","Huỳnh Đức","Lê Văn Hiệp","Đỗ Hồng Quang","Nguyễn Văn Điệp","Trần Văn Thơ","Nguyễn Khắc Tuấn ","Nguyễn Anh Tuấn","Hà Phước Thái",
 "Hồ Đình Trí","Phạm Quang Mẫn ","Võ Văn Thành","Phạm Phú Dũng","Nguyễn Văn Hoàng","Đinh Hữu Công","Nguyễn Văn Sơn","Phùng Nhật Tuyên","Nguyễn Ngọc Tâm","Lê Thị Lành","Dương Đình Cường ","Trương Thanh Tịnh ",
-"Nguyễn Đức Hải","Nguyễn Thi Mây","Hồ Thanh Tâm","Lê Long Khánh","Võ Thị Thanh Minh","Đặng Thị Vân","Trịnh Hồng Minh ","Phạm Thị Kim Thoa ","Nguyễn Đình Khâm Thuận","Trương Công Nhàn ","Nguyễn Thị Thanh Phúc","Hồ Thị Hoàng Châu "
+"Nguyễn Đức Hải","Nguyễn Thi Mây","Hồ Thanh Tâm","Lê Long Khánh","Võ Thị Thanh Minh","Đặng Thị Vân","Trịnh Nguyễn Hồng Minh ","Phạm Thị Kim Thoa ","Nguyễn Đình Khâm Thuận","Trương Công Nhàn ","Nguyễn Thị Thanh Phúc","Hồ Thị Hoàng Châu "
 
  ] 
   } 

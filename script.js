@@ -1,35 +1,20 @@
 // ==========================================
-// 1. CẤU HÌNH FIREBASE (CHẠY SONG SONG)
+// 1. CẤU HÌNH FIREBASE
 // ==========================================
-
-// --- FIREBASE CŨ (Chỉ dùng để ĐỌC dữ liệu lịch sử) ---
-const oldConfig = {
+// Dán cấu hình bạn copy từ Firebase Console vào đây
+const firebaseConfig = {
   apiKey: "AIzaSyDWPq92w48NfPzuec0TPFfni-ZVQMFJOLs",
   authDomain: "thaoluandaihoi.firebaseapp.com",
+  databaseURL: "https://thaoluandaihoi-default-rtdb.asia-southeast1.firebasedatabase.app",
   projectId: "thaoluandaihoi",
   storageBucket: "thaoluandaihoi.firebasestorage.app",
   messagingSenderId: "843405316234",
   appId: "1:843405316234:web:06d7cd6d1d9dbd49605d73",
   measurementId: "G-HNGH4F39TG"
 };
-// Khởi tạo Firebase cũ (Mặc định)
-firebase.initializeApp(oldConfig);
-const oldDb = firebase.firestore();
-
-// --- FIREBASE MỚI (Dùng để GHI và ĐỌC dữ liệu mới) ---
-const newConfig = {
-  apiKey: "AIzaSyDqfSuXkXNklK23Tkv9O9vOv-yHS3vojvM",
-  authDomain: "thaoluan-c3959.firebaseapp.com",
-  projectId: "thaoluan-c3959",
-  storageBucket: "thaoluan-c3959.firebasestorage.app",
-  messagingSenderId: "600535598889",
-  appId: "1:600535598889:web:93c89de58e1f11d2bdd938",
-  measurementId: "G-RK84MWQCRK"
-};
-// Khởi tạo Firebase mới (Bắt buộc phải đặt tên định danh là "newApp")
-const newApp = firebase.initializeApp(newConfig, "newApp");
-const newDb = newApp.firestore();
-
+// Khởi tạo Firebase
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
 const COLLECTION_NAME = "thaoluan";
 // ==========================================
 // 2. DỮ LIỆU ĐẠI BIỂU (Danh sách các Tổ)
@@ -114,15 +99,14 @@ const groups = [
  ] 
   } 
 ];
-let currentGroup = null;
-let oldComments = []; // Chứa dữ liệu từ db cũ
-let newComments = []; // Chứa dữ liệu từ db mới
-let comments = [];    // Mảng tổng hợp để hiển thị
 
+let currentGroup = null;
+let comments = [];
 // ==========================================
 // 3. LOGIC XỬ LÝ GIAO DIỆN & FIREBASE
 // ==========================================
 
+// Khi tải trang xong: Ẩn loader, hiện thẳng danh sách Tổ (Không qua Menu)
 window.addEventListener("load", () => {
   setTimeout(() => {
     document.getElementById("loader").style.display = "none";
@@ -130,48 +114,29 @@ window.addEventListener("load", () => {
     renderGroups();
   }, 1000);
 });
+// Lắng nghe dữ liệu Real-time từ Firebase
+db.collection("thaoluan").onSnapshot((snapshot) => {
+  comments = [];
+  
+  snapshot.forEach((doc) => {
+    comments.push(doc.data());
+  });
 
-// Hàm gộp dữ liệu cũ và mới để hiển thị lên màn hình
-function mergeAndRenderComments() {
-  // Gộp 2 mảng lại với nhau
-  comments = [...oldComments, ...newComments];
-
-  // Sắp xếp lại theo thời gian thực (Cũ xếp trước, mới xếp sau)
+  // Tự động sắp xếp tin nhắn bằng Javascript thay vì nhờ Firebase (tránh lỗi thiếu Index)
   comments.sort((a, b) => {
     let timeA = a.timestamp ? a.timestamp.toMillis() : Date.now();
     let timeB = b.timestamp ? b.timestamp.toMillis() : Date.now();
     return timeA - timeB;
   });
   
-  // Tự động Cập nhật giao diện
+  // Tự động Cập nhật giao diện (Đổi màu tên, Thanh tiến độ, Danh sách ý kiến)
   if (currentGroup && !document.getElementById("discussion").classList.contains("hidden")) {
     loadComments();
-    loadProgress(); 
+    loadProgress(); // Hàm này sẽ quét lại danh sách và đổi người đó sang màu Xanh
   }
-}
-
-// 1. Lắng nghe dữ liệu từ Database CŨ
-oldDb.collection(COLLECTION_NAME).onSnapshot((snapshot) => {
-  oldComments = [];
-  snapshot.forEach((doc) => {
-    oldComments.push(doc.data());
-  });
-  mergeAndRenderComments();
 }, (error) => {
-  console.log("Lỗi đồng bộ DB Cũ: ", error);
+  console.log("Lỗi đồng bộ Real-time: ", error);
 });
-
-// 2. Lắng nghe dữ liệu từ Database MỚI
-newDb.collection(COLLECTION_NAME).onSnapshot((snapshot) => {
-  newComments = [];
-  snapshot.forEach((doc) => {
-    newComments.push(doc.data());
-  });
-  mergeAndRenderComments();
-}, (error) => {
-  console.log("Lỗi đồng bộ DB Mới: ", error);
-});
-
 function showToast(message){
   const toast = document.getElementById("toast");
   toast.innerText = message;
@@ -205,10 +170,11 @@ function renderGroups(){
 function openGroup(id){
   currentGroup = groups.find(g => g.id === id);
   
+  // Chuyển màn hình
   document.getElementById("groupContainer").classList.add("hidden");
   document.getElementById("discussion").classList.remove("hidden");
   window.scrollTo({ top: 0, behavior: 'smooth' });
-  
+  // Set nội dung
   document.getElementById("groupTitle").innerText = currentGroup.title;
   document.getElementById("groupTopic").innerText = currentGroup.topic;
   document.getElementById("searchInput").value = "";
@@ -217,6 +183,7 @@ function openGroup(id){
   loadProgress();
   loadComments();
   
+  // Mặc định ẩn chi tiết nội dung gợi ý cho gọn
   document.getElementById("topicContent").classList.remove("hidden-topic");
   document.getElementById("topicArrow").classList.add("rotate");
 }
@@ -235,12 +202,13 @@ function toggleTopic(){
 function renderMembers(){
   const select = document.getElementById("memberSelect");
   select.innerHTML = "";
+  // Đổ danh sách thành viên của nhóm hiện tại vào ô Dropdown
   currentGroup.members.forEach(member => {
     select.innerHTML += `<option value="${member}">${member}</option>`;
   });
 }
 
-// Gửi góp ý lên Firebase MỚI (Lưu ý: newDb)
+// Gửi góp ý lên Firebase
 function submitComment(){
   const selectedMember = document.getElementById("memberSelect").value;
   const guestName = document.getElementById("guestNameInput").value.trim();
@@ -257,12 +225,12 @@ function submitComment(){
     return;
   }
 
+  // Khóa nút để tránh spam (Tùy chọn)
   const btn = document.querySelector(".form-box button");
   btn.disabled = true;
   btn.innerText = "ĐANG GỬI...";
 
-  // CHÚ Ý CHỖ NÀY: Dùng newDb để đẩy dữ liệu qua Firebase mới
-  newDb.collection(COLLECTION_NAME).add({
+  db.collection("thaoluan").add({
     groupId: currentGroup.id,
     member: member,
     comment: comment,
@@ -273,7 +241,7 @@ function submitComment(){
     document.getElementById("guestNameInput").value = "";
     showToast("Đã gửi góp ý thành công!");
   }).catch((error) => {
-    showToast("Lỗi kết nối! Vui lòng kiểm tra lại quyền Database mới.");
+    showToast("Lỗi kết nối! Vui lòng thử lại.");
     console.error(error);
   }).finally(() => {
     btn.disabled = false;
@@ -285,6 +253,7 @@ function loadComments(){
   const box = document.getElementById("commentsList");
   box.innerHTML = "";
   
+  // Lọc lấy comment của tổ hiện tại, sau đó đảo ngược để tin mới nhất lên đầu
   const groupComments = comments.filter(item => item.groupId === currentGroup.id).reverse();
   
   if (groupComments.length === 0) {
@@ -308,6 +277,7 @@ function loadProgress(){
   box.innerHTML = "";
   
   currentGroup.members.forEach(member => {
+    // Kiểm tra xem thành viên này đã có ý kiến trong mảng comments chưa
     const done = comments.some(item => item.groupId === currentGroup.id && item.member === member);
     box.innerHTML += `
       <div class="progress-item">
@@ -323,16 +293,22 @@ function loadProgress(){
 function updateStats(){
   const total = currentGroup.members.length;
   
+  // 1. Lọc lấy tất cả các ý kiến thuộc về Tổ hiện tại
   const groupComments = comments.filter(item => item.groupId === currentGroup.id);
   const listedMemberNames = new Set(currentGroup.members);
   
+  // 2. Trích xuất tên người gửi và dùng Set để LOẠI BỎ TRÙNG LẶP
+  // Ví dụ: ["A", "B", "A", "A"] sẽ bị biến thành ["A", "B"]
   const uniqueMembers = new Set(
     groupComments
       .map(item => item.member)
       .filter(member => listedMemberNames.has(member))
   );
   
+  // 3. Đếm số lượng người (size) thay vì đếm số bài
   const done = uniqueMembers.size; 
+  
+  // 4. Tính toán số người chưa nộp và %
   const pending = total - done;
   const percent = Math.round((done / total) * 100) || 0; 
 
@@ -342,16 +318,18 @@ function updateStats(){
   document.getElementById("progressFill").style.width = percent + "%";
   document.getElementById("progressText").innerText = `${percent}% hoàn thành`;
 }
-
 function filterMembers() {
+  // Lấy từ khóa người dùng gõ và chuyển thành chữ thường
   const keyword = document.getElementById("searchInput").value.toLowerCase();
   const select = document.getElementById("memberSelect");
   select.innerHTML = "";
 
+  // Lọc ra những người trong tổ có tên chứa từ khóa
   const filtered = currentGroup.members.filter(member => 
     member.toLowerCase().includes(keyword)
   );
 
+  // Cập nhật lại danh sách Dropdown
   if (filtered.length === 0) {
     select.innerHTML = `<option value="">Không tìm thấy đại biểu, hãy nhập tên ở ô bên dưới</option>`;
   } else {
